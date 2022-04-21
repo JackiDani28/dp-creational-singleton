@@ -5,12 +5,12 @@
 #include "SingletonDatabase.h"
 
 SingletonDatabase::SingletonDatabase() {
-    clog << "constructed" << endl;
+    clog << "constructed" << endl;/**Mostrar información clave*/
 
     // Create a text string, which is used to output the text file
     string productName;
     string sPrice;
-    string FILENAME="../../database.txt";
+    string FILENAME="../../database.txt";/**Direcciones relativas*/
 
     // Read from the text file
     ifstream myReadFile(FILENAME);
@@ -20,9 +20,9 @@ SingletonDatabase::SingletonDatabase() {
     }
 
     // Use a while loop together with the getline() function to readByLine the file line by line
-    while (getline (myReadFile, productName)) {
+    while (getline (myReadFile, productName)) {/**cargar linea por linea*/
         getline(myReadFile, sPrice);
-        products[productName] = stod(sPrice); // Convert double from string
+        products[productName] = stod(sPrice); // Convert double from string/**Cargar la llave*/
     }
 
     // Close the file

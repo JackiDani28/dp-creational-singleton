@@ -15,7 +15,7 @@ int main() {
         double price1 = SingletonDatabase::getInstance().getPrice("PS5 Game: Call of Duty");
         cout << "First Request [New Instance] [PS5 Game: Call of Duty]   Price : " << price1 << endl;
 
-        double price2 = SingletonDatabase::getInstance().getPrice("PS5 Game: Fifa");
+        double price2 = SingletonDatabase::getInstance().getPrice("PS5 Game: Fifa");/**no va a la base de datos, sino a la información que esta cargada en memoria*/
         cout << "Second Request [Same Instance] [PS5 Game: Fifa]         Price : " << price2 << endl;
 
         double price3 = SingletonDatabase::getInstance().getPrice("PS4 Game: Uncharted");
